@@ -15,3 +15,4 @@ Console.WriteLine($"Квадрат числа {num} = {square}");
 
 
 
+
