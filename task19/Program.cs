@@ -9,21 +9,18 @@
 
 
 
+// Console.Write("Введите положительное пятизначное число: ");
+// int new = Convert.ToInt32 (Console.ReadLine());
+// void Palind(int newPal)
+// {
+//     if (new<)
+    
+// }
+
+// Palind (new);
 
 
-// Console.Write("Введите координату X первой точки: ");
-// int ax = Convert.ToInt32 (Console.ReadLine());
-// Console.Write("Введите координату Y первой точки: ");
-// int ay = Convert.ToInt32 (Console.ReadLine());
-// Console.Write("Введите координату Z первой точки: ");
-// int az = Convert.ToInt32 (Console.ReadLine());
-// Console.WriteLine("___________________________________");
-// Console.Write("Введите координату X второй точки: ");
-// int bx = Convert.ToInt32 (Console.ReadLine());
-// Console.Write("Введите координату Y второй точки: ");
-// int by = Convert.ToInt32 (Console.ReadLine());
-// Console.Write("Введите координату Z второй точки: ");
-// int bz = Convert.ToInt32 (Console.ReadLine());
+
 
 // double Vektor (int axN, int ayN, int azN, int bxN, int byN, int bzN)
 // {
