@@ -14,7 +14,7 @@ void Palind(int newPal)
 {
     if (newPal < 10001 || newPal > 99999) 
     {
-        Console.Write("Нужно было ввестиположительное пятизначное число");
+        Console.Write("Нужно было ввести положительное пятизначное число");
     }
     else
     {
