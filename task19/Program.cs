@@ -8,26 +8,21 @@
 // 23432 -> да
 
 
-
-// Console.Write("Введите положительное пятизначное число: ");
-// int new = Convert.ToInt32 (Console.ReadLine());
-// void Palind(int newPal)
-// {
-//     if (new<)
-    
-// }
-
-// Palind (new);
-
-
-
-
-// double Vektor (int axN, int ayN, int azN, int bxN, int byN, int bzN)
-// {
-//     double dlina = Math.Sqrt((bxN-axN)*(bxN-axN) + (byN-ayN)*(byN-ayN) + (bzN-azN)*(bzN-azN));
-//     return dlina;
-// }
-
-// double vektor = Math.Round (Vektor (ax, ay, az, bx, by, bz), 2);
-
-// Console.Write($"Расстояние между двумя точками A ({ax},{ay},{az}) и B ({bx},{by},{bz}) : {vektor}");
+Console.Write("Введите положительное пятизначное число: ");
+int chislo5 = Convert.ToInt32 (Console.ReadLine());
+void Palind(int newPal)
+{
+    if (newPal < 10001 || newPal > 99999) 
+    {
+        Console.Write("Нужно было ввестиположительное пятизначное число");
+    }
+    else
+    {
+        int a1=newPal/10000;
+        int a2=newPal/1000%10;
+        int a4=newPal/10%10;
+        int a5=newPal%10;
+        Console.WriteLine(a1==a5 && a2==a4 ? $"число {chislo5} - палиндром" : $"число {chislo5} - НЕ палиндром");
+    }
+}
+Palind (chislo5);
