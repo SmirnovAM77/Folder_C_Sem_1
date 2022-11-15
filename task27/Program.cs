@@ -11,7 +11,7 @@ int SummNumb (int num)
     num = Math.Abs(num); //берем модуль, если вдруг пользователь ввел отрицательно число
     int buffer = 0;
     int summ = 0;
-    while (num > 1)
+    while (num >= 1)
     {
         buffer = num % 10;
         num = num / 10;
