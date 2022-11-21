@@ -36,24 +36,8 @@ int EvenNumbers (int[] array)
     return numbers;
 
 }
-// int[] GetSumPositiveNegativeElem(int[] array)
-// {
-// int sumPositive = 0;
-// int sumNegative = 0;
-// for (int i = 0; i < array.Length; i++)
-// {
-// if (array[i] > 0) sumPositive += array[i];
-// else sumNegative += array[i];
-// }
-
-// int[] result = {sumPositive,sumNegative};
-// return result;
-// }
 
 int[] arr = CreateArrayRndInt(12, 111, 999);
 PrintArray(arr);
 int evenNumbers = EvenNumbers(arr);
 Console.WriteLine($"Количество четных чисел в массиве - {evenNumbers}");
-// int[] sumPositiveNegativeElem = GetSumPositiveNegativeElem(arr);
-// Console.WriteLine($"Сумма положительных элементов = {sumPositiveNegativeElem[0]}");
-// Console.WriteLine($"Сумма отрицательных элементов = {sumPositiveNegativeElem[1]}");
