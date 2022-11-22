@@ -25,6 +25,10 @@ double Yposition (double b1y, double k1y, double b2y, double k2y)
     return coordinat;
 }
 
+if (k1 == k2) Console.WriteLine("коэффициент k1 не должен быть равен k2");
+else
+{
 double хposition = Xposition(b1, k1, b2, k2);
 double yposition = Yposition(b1, k1, b2, k2);
-Console.WriteLine($"Координаты точки перечения - ({хposition} ; {хposition})");
+Console.WriteLine($"Координаты точки перечения - ({хposition} ; {yposition})");
+}
