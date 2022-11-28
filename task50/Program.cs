@@ -47,8 +47,11 @@ int row = Convert.ToInt32 (Console.ReadLine());
 Console.Write("позицию столбца:   ");
 int column = Convert.ToInt32 (Console.ReadLine());
 
-
+if (row < 0 || column < 0) Console.WriteLine("Минимальные позиции элементов могут быть равны 0");
+else
+{
 int[,] newmatrix = CreateMatrix(4, 5, -90, 90);
 bool matrixElement = MatrixElement(newmatrix, row, column);
 PrintArray(newmatrix);
-Console.WriteLine(matrixElement? $"елемент ({row}, {column}) в массиве есть" : $"елемента ({row}, {column}) в массиве нет");
+Console.WriteLine(matrixElement? $"значение елемента с указанными позициями: {newmatrix[row, column]}" : $"елемента ({row}, {column}) в массиве нет");
+}

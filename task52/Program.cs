@@ -6,8 +6,9 @@
 // 8 4 2 4
 // Среднее арифметическое каждого столбца: 4,6; 5,6; 3,6; 3.
 
-void ArithmeticMean(int[,] matrix)
+double[] ArithmeticMean(int[,] matrix)
 {
+double[] matrixNew = new double[matrix.GetLength(1)];
 for (int j = 0; j < matrix.GetLength(1); j++)
 {
     double mean = 0;
@@ -19,8 +20,9 @@ for (int j = 0; j < matrix.GetLength(1); j++)
     }
     mean = mean / (matrix.GetLength(0) - zeroNum);  //если нам встречается "0", то мы делим на количество строк за минусом строки с "0"
     mean = Math.Round(mean, 1); //округление до 1 знака после запятой
-    Console.Write($"{mean, 5}; ");
+    matrixNew[j] = mean; 
 }
+return matrixNew;
 }
 
 int[,] CreateMatrix(int rows, int columns, int min, int max)
@@ -51,7 +53,17 @@ for (int i = 0; i < matrix.GetLength(0); i++)
 }
 }
 
+void PrintArrayMean(double[] line)
+{
+int size = line.Length;
+for (int i = 0; i < size; i++)
+{
+    Console.Write($"{line[i], 4} | ");
+}
+}
+
 int[,] newmatrix = CreateMatrix(4, 4, 0, 5);
 PrintArray(newmatrix);
 Console.WriteLine("Среднее арифметическое каждого столбца:");
-ArithmeticMean(newmatrix);
+double[] arithmeticMean = ArithmeticMean(newmatrix);
+PrintArrayMean(arithmeticMean);
