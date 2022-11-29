@@ -10,43 +10,35 @@ int[,] CreateMatrix(int rows, int columns)
 {
 int[,] matrix = new int[rows, columns];
 
-for (int j = 0; j < columns; j++) //1-4
+for (int j = 0; j < columns; j++) //1-4    ----------
     {
         matrix[0, j] = 1+j;
     }
-
 for (int i = 1; i < rows; i++) //4-7
     {
         matrix[i, columns-1] = matrix[i-1, columns-1] + 1;
     }
-
 for (int j = 1; j < columns; j++) //7-10
     {
         matrix[ rows-1, columns - j -1] = matrix[rows-1, columns-j]+1;
     }
-
 for (int i = 1; i < rows-1; i++) //10-12
     {
         matrix[rows-i-1, columns-columns] = matrix[rows-i, columns-columns] + 1;
     }
-
-// for (int i = 0; i < rows; i++)
-// {
-//     for (int j = 0; j < columns; j++)
-//     {
-//         matrix[i, j] = rnd.Next(2, 19 + 1);
-//     }
-// }
-
-// int[,] matrix = new int[rows, columns];
-// Random rnd = new Random();
-// for (int i = 0; i < rows; i++)
-// {
-//     for (int j = 0; j < columns; j++)
-//     {
-//         matrix[i, j] = rnd.Next(2, 19 + 1);
-//     }
-// }
+for (int j = 0; j < columns-2; j++) //12-14   ------------
+    {
+        matrix[ 1, j + 1] = matrix[1, j]+1;
+    }
+for (int i = 1; i < rows-2; i++) //14-15
+    {
+        matrix[i+1, columns-2] = matrix[i, columns-2] + 1;
+    }
+    for (int j = 1; j < columns-2; j++) //15-16
+    {
+        matrix[ rows-2, columns - j -2] = matrix[rows-2, columns-j-1]+1;
+    }
+ 
 return matrix;
 }
 
