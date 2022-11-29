@@ -51,4 +51,7 @@ if ((row*column*depth) < 200)
     int[,,] createMatrix = CreateMatrix(row, column, depth);
     PrintArray(createMatrix);
 }
-else Console.WriteLine("Заданный массив слишком большой.");
+else 
+{
+    Console.WriteLine("Заданный массив слишком большой.");
+}
