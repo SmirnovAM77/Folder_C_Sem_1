@@ -11,7 +11,7 @@ int[] NewArray (int length)
     Random rnd = new Random();
     for (int i = 0; i < length; i++)
     {
-        array[i] = rnd.Next(0,3000);
+        array[i] = rnd.Next(1,3000);
     }
     return array;
 }
@@ -39,9 +39,13 @@ void PrintArray (int[] arrayP)
     Console.Write("[");
     for (int i = 0; i < arrayPLength; i++)
     {
-        Console.Write($"{arrayP[i]}, ");
-    }   
-    Console.Write($"{arrayP[arrayPLength]}]");
+        if (arrayP[i] > 0) Console.Write($"{arrayP[i]}, ");
+    } 
+    if (arrayP[arrayPLength] > 0)
+    {
+        Console.Write($"{arrayP[arrayPLength]}]");
+    }  
+    Console.Write("]");
 }
 
 if (len > 3)
